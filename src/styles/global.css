@@ -1,14 +1,20 @@
 body {
-  background: var(--barnd-color);
+  background: var(--brand-color);
   color: var(--primary-text-color);
   font-family: 'Inter', sans-serif;
 
   min-width: auto;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 ::selection {
-  color: var(--primary-text-color);
-  background-color: var(--barnd-color);
+  color: var(--brand-color);
+  background-color: var(--primary-text-color);
+}
+
+input::placeholder {
+  color: var(--brand-color);
 }
 
 * {
@@ -25,8 +31,11 @@ body {
 
 button,
 .button {
-  color: var(--barnd-color);
-  background-color: var(--primary-text-color);
+  color: var(--primary-text-color);
+  background-color: var(--brand-color);
+  border-radius: 16px;
+  padding: 18px 20px 20px;
+  text-align: center;
 
   transition: all 150ms ease-out;
 
@@ -37,6 +46,13 @@ button,
   &:active {
     opacity: 0.7;
   }
+}
+
+input {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--brand-color);
+  text-align: center;
 }
 
 a.disabled {
@@ -59,4 +75,32 @@ a {
 h1 {
   color: var(--primary-text-color);
   font-family: 'catalpaultrablack', sans-serif;
+  font-size: 62px;
+  line-height: 1;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.icon-twitter {
+  background-image: url('../assets/images/twitter.svg');
+}
+.icon-discord {
+  background-image: url('../assets/images/discord.svg');
+}
+.icon-instagram {
+  background-image: url('../assets/images/instagram.svg');
+}
+
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }

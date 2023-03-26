@@ -1,4 +1,52 @@
 <div>
-  <h1>Hello world!</h1>
-  <h2>{{CONTACT_EMAIL}}</h2>
+  <header
+    style="
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      padding: 16px;
+      position: relative;
+      z-index: 1;
+    "
+  >
+    <img src="./assets/images/logo.svg" />
+    <ul style="display: flex; font-size: 18px; font-weight: bold">
+      <li style="margin-right: 55px"><a href="{{URL_TWITTER}}">Twitter</a></li>
+      <li style="margin-right: 55px"><a href="{{URL_INSTAGRAM}}">Instagram</a></li>
+    </ul>
+  </header>
+
+  <div style="margin: 0 9.4%; position: relative; z-index: 1">
+    <h1>Pawsome<br />pet videos for<br />everyone</h1>
+    <p style="font-size: 26px; line-height: 32px; margin-top: 12px; margin-bottom: 24px">
+      Get paid to create and watch<br />the best pet content on the web
+    </p>
+    <form
+      style="border-radius: 24px; background-color: #fff; color: var(--brand-color); padding: 24px; max-width: 412px"
+    >
+      <h2 style="font-size: 24px; line-height: 28px; font-weight: bold">Join the furrend circle</h2>
+      <p style="margin-top: 4px; margin-bottom: 12px; font-size: 17px; line-height: 24px">
+        Want early access? Be the first one to know
+      </p>
+      <div style="display: flex; flex-direction: column">
+        <input type="email" placeholder="Your email address" />
+        <button style="margin-top: 8px" type="submit">Sign me up</button>
+      </div>
+    </form>
+  </div>
+
+  <div style="">
+    <img style="position: absolute; right: 0; top: 50px" src="./assets/images/app-3d.png" />
+    <img style="position: absolute; right: 0; bottom: 0" src="./assets/images/clouds-bottom.png" />
+  </div>
+  <video id="video" preload playsinline muted loop>
+    <source src="./assets/output.webm" type="video/webm" />
+  </video>
+  <script>
+    document.getElementById('video').play()
+  </script>
+  <!-- <a href="{{URL_TWITTER}}" target="_blank"><span class="icon icon-twitter"></span></a>
+  <a href="{{URL_DISCORD}}" target="_blank"><span class="icon icon-discord"></span></a>
+  <a href="{{URL_INSTAGRAM}}" target="_blank"><span class="icon icon-instagram"></span></a> -->
 </div>
+-
