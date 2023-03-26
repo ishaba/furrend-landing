@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'catalpaultrablack';
+  src: url('/src/assets/fonts/catalpa-ultrablack-webfont.woff2') format('woff2'),
+    url('/src/assets/fonts/catalpa-ultrablack-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+  font-display: swap;
+}

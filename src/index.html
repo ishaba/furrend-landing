@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{META_TITLE}}</title>
+    <meta name="title" content="{{META_TITLE}}" />
+    <meta name="description" content="{{META_DESCRIPTION}}" />
+    <meta name="keywords" content="{{META_KEYWORDS}}" />
+
+    <meta property="og:title" content="{{META_TITLE}}" />
+    <meta property="og:description" content="{{META_DESCRIPTION}}" />
+    <meta property="og:image" content="{{META_OG_IMG_URL}}" />
+    <meta property="og:url" content="{{META_SITE_URL}}" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{META_SITE_URL}}" />
+    <meta property="twitter:title" content="{{META_TITLE}}" />
+    <meta property="twitter:description" content="{{META_DESCRIPTION}}" />
+    <meta property="twitter:image" content="{{META_OG_IMG_URL}}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="{{BRAND_COLOR}}" />
+
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="mask-icon" href="./assets/images/favicon.svg" color="{{BRAND_COLOR}}" />
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/manifest.webmanifest" />
+    <meta name="theme-color" content="{{BRAND_COLOR}}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link
+      rel="preload"
+      href="./assets/fonts/catalpa-ultrablack-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="./assets/fonts/catalpa-ultrablack-webfont.woff" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles/fonts.css" media="print" onload="this.media='all'; this.onload=null;" />
+
+    <!-- <link rel="preload" href="./assets/video/hero.webm" as="fetch" type="video/webm" /> -->
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <include src="landing.html"> </include>
+    <script type="module">
+      import './scripts.js'
+    </script>
+    <script type="module">
+      if (navigator && 'serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register(new URL('./service-worker.js', import.meta.url))
+        })
+      }
+    </script>
+  </body>
+</html>

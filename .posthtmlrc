@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "posthtml-include": {
+      "root": "src"
+    },
+    "posthtml-expressions": {
+      "locals": {
+        "META_TITLE": "Furrend",
+        "META_DESCRIPTION": "Pawsome petvideos for everyone",
+        "META_KEYWORDS": "Furrend, pets, videos, petvideos",
+        "META_OG_IMG_URL": "https://www.furrend.xyz/",
+        "META_SITE_URL": "https://www.furrend.xyz/",
+        "BRAND_COLOR": "#ff4b00",
+        "CONTACT_EMAIL": "hi@furrend.xyz",
+        "URL_TWITTER": "https://twitter.com/hifurrend",
+        "URL_INSTAGRAM": "https://instagram.com/hifurrend"
+      }
+    }
+  }
+}

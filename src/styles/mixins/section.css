@@ -1,0 +1,7 @@
+@define-mixin section {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}

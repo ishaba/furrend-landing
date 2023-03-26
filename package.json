@@ -1,0 +1,33 @@
+{
+  "name": "furrend-landing",
+  "version": "1.0.0",
+  "private": false,
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "parcel": "latest",
+    "parcel-plugin-sw-cache": "^0.3.1",
+    "postcss": "^8.4.21",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^8.1.0",
+    "posthtml": "^0.16.6",
+    "posthtml-expressions": "^1.11.0",
+    "posthtml-include": "^1.7.4"
+  },
+  "alias": {
+    "process": false,
+    "Buffer": false,
+    "buffer": false
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

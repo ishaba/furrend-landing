@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "postcss-nested": {},
+    "postcss-mixins": {
+      "mixinsDir": "./src/styles/mixins"
+    },
+    "cssnano": { "preset": "default" }
+  }
+}

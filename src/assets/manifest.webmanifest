@@ -1,0 +1,11 @@
+{
+  "name": "Furrend",
+  "short_name": "Furrend",
+  "icons": [
+    { "src": "./images/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "./images/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "background_color": "#ff4b00",
+  "theme_color": "#ffffff",
+  "display": "fullscreen"
+}
