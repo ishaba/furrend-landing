@@ -50,8 +50,32 @@
   </div>
 
   <div style="user-select: none" class="parallax-wrap">
-    <img style="position: absolute; right: 0; top: 50px; width: 1024px" src="./assets/images/app-3d.png" />
+    <img style="position: absolute; right: 0; top: 50px; width: 1024px" src="./assets/images/app-3d.png?v2" />
     <img style="position: absolute; left: 0; bottom: 0" src="./assets/images/clouds-left.png" />
+    <img
+      style="position: absolute; left: 453px; top: 684px; width: 65px; height: 65px"
+      class="bubble"
+      value="-5"
+      src="./assets/images/bubble-1.png"
+    />
+    <img
+      style="position: absolute; left: 542px; top: 175px; width: 190px; height: 190px"
+      class="bubble"
+      value="10"
+      src="./assets/images/bubble-2.png"
+    />
+    <img
+      style="position: absolute; left: 184px; top: 566px; width: 65px; height: 65px"
+      class="bubble"
+      value="20"
+      src="./assets/images/bubble-3.png"
+    />
+    <img
+      style="position: absolute; left: 1039px; top: 313px; width: 121px; height: 121px"
+      class="bubble"
+      value="-10"
+      src="./assets/images/bubble-4.png"
+    />
     <!-- <img
       style="position: absolute; right: 50%; bottom: -50px; border: 1px solid red"
       src="./assets/images/clouds.png"
@@ -61,7 +85,7 @@
     <script>
       document.addEventListener('mousemove', parallax)
       function parallax(event) {
-        this.querySelectorAll('.parallax-wrap span').forEach((shift) => {
+        this.querySelectorAll('.parallax-wrap .bubble').forEach((shift) => {
           const position = shift.getAttribute('value')
           const x = (window.innerWidth - event.pageX * position) / 90
           const y = (window.innerHeight - event.pageY * position) / 90
@@ -77,8 +101,22 @@
   <script>
     document.getElementById('video').play()
   </script>
-  <!-- <a href="{{URL_TWITTER}}" target="_blank"><span class="icon icon-twitter"></span></a>
-  <a href="{{URL_DISCORD}}" target="_blank"><span class="icon icon-discord"></span></a>
-  <a href="{{URL_INSTAGRAM}}" target="_blank"><span class="icon icon-instagram"></span></a> -->
+  <ul>
+    <if condition="URL_TWITTER">
+      <li style="margin-right: 55px">
+        <a href="{{URL_TWITTER}}" target="_blank"><i class="icon icon-twitter"></i></a>
+      </li>
+    </if>
+    <if condition="URL_DISCORD">
+      <li style="margin-right: 55px">
+        <a href="{{URL_DISCORD}}" target="_blank"><i class="icon icon-doscord"></i></a>
+      </li>
+    </if>
+    <if condition="URL_INSTAGRAM">
+      <li style="margin-right: 55px">
+        <a href="{{URL_INSTAGRAM}}" target="_blank"><i class="icon icon-instagram"></i></a>
+      </li>
+    </if>
+  </ul>
 </div>
 -
