@@ -9,10 +9,17 @@
       z-index: 1;
     "
   >
-    <img src="./assets/images/logo.svg" />
+    <img style="user-select: none" src="./assets/images/logo.svg" />
     <ul style="display: flex; font-size: 18px; font-weight: bold">
-      <li style="margin-right: 55px"><a href="{{URL_TWITTER}}">Twitter</a></li>
-      <li style="margin-right: 55px"><a href="{{URL_INSTAGRAM}}">Instagram</a></li>
+      <if condition="URL_TWITTER">
+        <li style="margin-right: 55px"><a href="{{URL_TWITTER}}" target="_blank">Twitter</a></li>
+      </if>
+      <if condition="URL_DISCORD">
+        <li style="margin-right: 55px"><a href="{{URL_DISCORD}}" target="_blank">Discord</a></li>
+      </if>
+      <if condition="URL_INSTAGRAM">
+        <li style="margin-right: 55px"><a href="{{URL_INSTAGRAM}}" target="_blank">Instagram</a></li>
+      </if>
     </ul>
   </header>
 
@@ -21,23 +28,48 @@
     <p style="font-size: 26px; line-height: 32px; margin-top: 12px; margin-bottom: 24px">
       Get paid to create and watch<br />the best pet content on the web
     </p>
-    <form
+    <div
       style="border-radius: 24px; background-color: #fff; color: var(--brand-color); padding: 24px; max-width: 412px"
     >
       <h2 style="font-size: 24px; line-height: 28px; font-weight: bold">Join the furrend circle</h2>
-      <p style="margin-top: 4px; margin-bottom: 12px; font-size: 17px; line-height: 24px">
+      <p style="margin-top: 4px; margin-bottom: 0px; font-size: 17px; line-height: 24px">
         Want early access? Be the first one to know
       </p>
-      <div style="display: flex; flex-direction: column">
+      <!-- <div style="display: flex; flex-direction: column">
         <input type="email" placeholder="Your email address" />
         <button style="margin-top: 8px" type="submit">Sign me up</button>
+      </div> -->
+      <div style="margin: -13px">
+        <script
+          src="//web.webformscr.com/apps/fc3/build/loader.js"
+          async
+          sp-form-id="a36ea70aba6177cac1169e40399913e7f6a00c55eeaae007e16db1dcb841b54a"
+        ></script>
       </div>
-    </form>
+    </div>
   </div>
 
-  <div style="">
+  <div style="user-select: none" class="parallax-wrap">
     <img style="position: absolute; right: 0; top: 50px" src="./assets/images/app-3d.png" />
-    <img style="position: absolute; right: 0; bottom: 0" src="./assets/images/clouds-bottom.png" />
+    <img style="position: absolute; left: 0; bottom: 0" src="./assets/images/clouds-left.png" />
+    <!-- <img
+      style="position: absolute; right: 50%; bottom: -50px; border: 1px solid red"
+      src="./assets/images/clouds.png"
+    /> -->
+    <!-- <img style="position: absolute; right: 0; bottom: 0" src="./assets/images/clouds-bottom.png" /> -->
+    <img style="position: absolute; right: 0; bottom: -250px" src="./assets/images/clouds.png" />
+    <script>
+      document.addEventListener('mousemove', parallax)
+      function parallax(event) {
+        this.querySelectorAll('.parallax-wrap span').forEach((shift) => {
+          const position = shift.getAttribute('value')
+          const x = (window.innerWidth - event.pageX * position) / 90
+          const y = (window.innerHeight - event.pageY * position) / 90
+
+          shift.style.transform = `translateX(${x}px) translateY(${y}px)`
+        })
+      }
+    </script>
   </div>
   <video id="video" preload playsinline muted loop>
     <source src="./assets/output.webm" type="video/webm" />
