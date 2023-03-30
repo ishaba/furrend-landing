@@ -269,6 +269,7 @@ form label,
   margin: 0 auto;
   position: relative;
   z-index: 10;
+  pointer-events: none;
 
   > p {
     font-size: 26px;
@@ -285,6 +286,7 @@ form label,
   padding: 24px;
   max-width: 100%;
   min-height: 264px;
+  pointer-events: auto;
 
   > h2 {
     font-size: 24px;
