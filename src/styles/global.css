@@ -4,8 +4,14 @@ body {
   font-family: 'Inter', sans-serif;
 
   min-width: auto;
-  max-height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 ::selection {
@@ -153,49 +159,6 @@ form label,
   }
 }
 
-header a {
-  border-bottom: 1px solid;
-  transition: all 150ms ease-out;
-
-  &:hover {
-    border-bottom-color: transparent;
-  }
-}
-
-.furr-sound {
-  position: absolute;
-  left: 999px;
-  top: 313px;
-  width: 121px;
-  height: 121px;
-  cursor: pointer;
-  z-index: 2;
-
-  transition: all 300ms ease-out;
-  transform-origin: 50% 50%;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  img {
-    width: 121px;
-    height: 121px;
-  }
-  img:nth-child(2) {
-    display: none;
-  }
-}
-
-.furr-sound.pause {
-  img:nth-child(1) {
-    display: none;
-  }
-  img:nth-child(2) {
-    display: block;
-  }
-}
-
 @keyframes clouds1 {
   0% {
     opacity: 0;
@@ -241,6 +204,14 @@ header a {
   }
 }
 
+.clouds {
+  position: absolute;
+  right: 0;
+  bottom: -250px;
+  width: 1055px;
+  height: 395px;
+}
+
 .clouds img {
   position: absolute;
   opacity: 0;
@@ -256,15 +227,134 @@ header a {
   animation: clouds3 4s infinite linear 2s;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding: 16px;
+  position: relative;
+  z-index: 20;
+  max-width: 1511px;
+  margin: 0 auto;
+}
+
 .header-nav {
   display: none;
   font-size: 18px;
   font-weight: bold;
+
+  a {
+    border-bottom: 1px solid;
+    transition: all 150ms ease-out;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  li {
+    margin-right: 55px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .header-nav {
     display: flex;
+  }
+}
+
+.content {
+  max-width: 1280px;
+  padding: 0 16px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+
+  > p {
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+}
+
+.form {
+  border-radius: 24px;
+  background-color: #fff;
+  color: var(--brand-color);
+  padding: 24px;
+  max-width: 100%;
+  min-height: 264px;
+
+  > h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+
+  > p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.sp-form-fields-wrapper {
+  width: 100% !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  .form {
+    max-width: 412px;
+  }
+
+  .sp-form-fields-wrapper {
+    max-width: 440px;
+  }
+}
+
+.parallax {
+  user-select: none;
+  max-width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin: -170px auto 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  picture {
+    width: 100%;
+  }
+
+  picture img {
+    position: absolute;
+    right: -100px;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .parallax {
+    max-width: 1280px;
+    margin: 0px auto;
+    height: auto;
+    position: absolute;
+    overflow: visible;
+
+    picture img {
+      position: absolute;
+      right: -100px;
+      top: -20px;
+      left: auto;
+      width: 1024px;
+    }
   }
 }
 
@@ -284,4 +374,82 @@ header a {
 
 .bubble {
   transition: all 100ms ease-out;
+}
+
+.bubble-1 {
+  position: absolute;
+  left: 35.5%;
+  top: 90%;
+  width: 65px;
+  height: 65px;
+}
+
+.bubble-2 {
+  position: absolute;
+  left: 9%;
+  top: 32%;
+  width: 190px;
+  height: 190px;
+}
+
+.bubble-3 {
+  position: absolute;
+  left: -2%;
+  top: 71%;
+  width: 65px;
+  height: 65px;
+}
+
+.furr-sound {
+  position: absolute;
+  left: 68%;
+  top: 48%;
+  width: 121px;
+  height: 121px;
+  cursor: pointer;
+  z-index: 2;
+
+  transition: all 300ms ease-out;
+  transform-origin: 50% 50%;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  img {
+    width: 121px;
+    height: 121px;
+  }
+  img:nth-child(2) {
+    display: none;
+  }
+}
+
+.furr-sound.pause {
+  img:nth-child(1) {
+    display: none;
+  }
+  img:nth-child(2) {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .bubble-1 {
+    left: 35.5%;
+  }
+
+  .bubble-2 {
+    left: 39.8%;
+    top: 22%;
+  }
+
+  .bubble-3 {
+    left: -2%;
+  }
+
+  .furr-sound {
+    left: 78%;
+    top: 38%;
+  }
 }

@@ -1,49 +1,25 @@
 <div>
-  <header
-    style="
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 28px;
-      padding: 16px;
-      position: relative;
-      z-index: 20;
-      max-width: 1511px;
-      margin: 0 auto;
-    "
-  >
+  <header class="header">
     <img style="user-select: none" src="./assets/images/logo.svg" />
     <ul class="header-nav">
       <if condition="URL_TWITTER">
-        <li style="margin-right: 55px"><a href="{{URL_TWITTER}}" target="_blank">Twitter</a></li>
+        <li><a href="{{URL_TWITTER}}" target="_blank">Twitter</a></li>
       </if>
       <if condition="URL_DISCORD">
-        <li style="margin-right: 55px"><a href="{{URL_DISCORD}}" target="_blank">Discord</a></li>
+        <li><a href="{{URL_DISCORD}}" target="_blank">Discord</a></li>
       </if>
       <if condition="URL_INSTAGRAM">
-        <li style="margin-right: 55px"><a href="{{URL_INSTAGRAM}}" target="_blank">Instagram</a></li>
+        <li><a href="{{URL_INSTAGRAM}}" target="_blank">Instagram</a></li>
       </if>
     </ul>
   </header>
 
-  <div style="max-width: 1280px; margin: 0 auto; position: relative; z-index: 10">
+  <div class="content">
     <h1>Pawsome<br />pet videos for<br />everyone</h1>
-    <p style="font-size: 26px; line-height: 32px; margin-top: 12px; margin-bottom: 24px">
-      Get paid to create and watch<br />the best pet content on the web
-    </p>
-    <div
-      style="
-        border-radius: 24px;
-        background-color: #fff;
-        color: var(--brand-color);
-        padding: 24px;
-        max-width: 412px;
-        min-height: 264px;
-      "
-    >
-      <h2 style="font-size: 24px; line-height: 28px; font-weight: bold">Join the furrend circle</h2>
-      <p style="margin-top: 4px; margin-bottom: 0px; font-size: 17px; line-height: 24px">
-        Want early access? Be the first one to know
-      </p>
+    <p>Get paid to create and watch<br />the best pet content on the web</p>
+    <div class="form">
+      <h2>Join the furrend circle</h2>
+      <p>Want early access? Be the first one to know</p>
       <div style="margin: -13px">
         <script
           src="//web.webformscr.com/apps/fc3/build/loader.js"
@@ -54,48 +30,20 @@
     </div>
   </div>
 
-  <div
-    style="
-      user-select: none;
-      max-width: 1280px;
-      margin: 0 auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 22;
-    "
-    class="parallax-wrap"
-  >
+  <div class="parallax">
     <picture>
       <source srcset="./assets/images/app-3d.webp" type="image/webp" />
       <source srcset="./assets/images/app-3d.png" type="image/jpeg" />
-      <img style="position: absolute; right: -100px; top: 50px; width: 1024px" srcset="./assets/images/app-3d.png" />
+      <img srcset="./assets/images/app-3d.png" />
     </picture>
-    <img
-      style="position: absolute; left: 453px; top: 684px; width: 65px; height: 65px"
-      class="bubble"
-      value="-3"
-      src="./assets/images/bubble-1.png"
-    />
-    <img
-      style="position: absolute; left: 522px; top: 245px; width: 190px; height: 190px"
-      class="bubble"
-      value="4"
-      src="./assets/images/bubble-2.png"
-    />
-    <img
-      style="position: absolute; left: -54px; top: 566px; width: 65px; height: 65px"
-      class="bubble"
-      value="4"
-      src="./assets/images/bubble-3.png"
-    />
+    <img class="bubble bubble-1" value="-3" src="./assets/images/bubble-1.png" />
+    <img class="bubble bubble-2" value="4" src="./assets/images/bubble-2.png" />
+    <img class="bubble bubble-3" value="4" src="./assets/images/bubble-3.png" />
     <audio id="furr-sound-audio">
       <source src="./assets/cat-purring.ogg" type="audio/ogg" />
       <source src="./assets/cat-purring.mp3" type="audio/mpeg" />
     </audio>
-    <button id="furr-sound-button" class="furr-sound" style="">
+    <button id="furr-sound-button" class="furr-sound">
       <img class="bubble" value="2" src="./assets/images/bubble-play.png" />
       <img class="bubble" value="2" src="./assets/images/bubble-pause.png" />
     </button>
@@ -113,7 +61,7 @@
       })
     </script>
 
-    <div style="position: absolute; right: 0; bottom: -250px; width: 1055px; height: 395px" class="clouds">
+    <div class="clouds">
       <img src="./assets/images/clouds.png" />
       <img src="./assets/images/clouds.png" />
       <img src="./assets/images/clouds.png" />
@@ -121,7 +69,7 @@
     <script>
       document.addEventListener('mousemove', parallax)
       function parallax(event) {
-        this.querySelectorAll('.parallax-wrap .bubble').forEach((shift) => {
+        this.querySelectorAll('.parallax .bubble').forEach((shift) => {
           const position = shift.getAttribute('value')
           const x = (window.innerWidth - event.pageX * position) / 90
           const y = (window.innerHeight - event.pageY * position) / 90
