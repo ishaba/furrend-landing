@@ -5,8 +5,8 @@
     },
     "posthtml-expressions": {
       "locals": {
-        "META_TITLE": "Furrend | Pet video | NFT | Web3",
-        "META_DESCRIPTION": "Pawsome petvideos for everyone",
+        "META_TITLE": "Furrend | Pet videos | NFT | Web3",
+        "META_DESCRIPTION": "Pawsome pet videos for everyone",
         "META_KEYWORDS": "Furrend, pets, videos, petvideos",
         "META_OG_IMG_URL": "https://raw.githubusercontent.com/ishaba/furrend-landing/main/src/assets/images/og_image.png",
         "META_SITE_URL": "https://www.furrend.xyz/",
