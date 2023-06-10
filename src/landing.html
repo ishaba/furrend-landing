@@ -2,6 +2,9 @@
   <header class="header">
     <img style="user-select: none" src="./assets/images/logo.svg" />
     <ul class="header-nav">
+      <if condition="URL_BLOG">
+        <li><a href="{{URL_BLOG}}" target="_blank">Blog</a></li>
+      </if>
       <if condition="URL_TWITTER">
         <li><a href="{{URL_TWITTER}}" target="_blank">Twitter</a></li>
       </if>
@@ -86,6 +89,11 @@
     document.getElementById('video').play()
   </script>
   <ul class="footer">
+    <if condition="URL_BLOG">
+      <li>
+        <a href="{{URL_BLOG}}" target="_blank"><i class="icon icon-blog"></i></a>
+      </li>
+    </if>
     <if condition="URL_TWITTER">
       <li>
         <a href="{{URL_TWITTER}}" target="_blank"><i class="icon icon-twitter"></i></a>
@@ -93,7 +101,7 @@
     </if>
     <if condition="URL_DISCORD">
       <li>
-        <a href="{{URL_DISCORD}}" target="_blank"><i class="icon icon-doscord"></i></a>
+        <a href="{{URL_DISCORD}}" target="_blank"><i class="icon icon-discord"></i></a>
       </li>
     </if>
     <if condition="URL_INSTAGRAM">

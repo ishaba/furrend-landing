@@ -99,6 +99,9 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.icon-blog {
+  background-image: url('../assets/images/blog.svg?asdasdasd');
+}
 .icon-twitter {
   background-image: url('../assets/images/twitter.svg');
 }

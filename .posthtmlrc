@@ -12,9 +12,10 @@
         "META_SITE_URL": "https://www.furrend.xyz/",
         "BRAND_COLOR": "#ff4b00",
         "CONTACT_EMAIL": "hi@furrend.xyz",
+        "URL_BLOG": "https://medium.com/furrend",
         "URL_TWITTER": "https://twitter.com/hifurrend",
         "URL_INSTAGRAM": "https://instagram.com/hifurrend",
-        "URL_DISCORD": ""
+        "URL_DISCORD": "https://discord.gg/ad7GGwExEk"
       }
     }
   }
